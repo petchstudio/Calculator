@@ -44,6 +44,8 @@
             this.buttonMinus = new System.Windows.Forms.Button();
             this.buttonPlus = new System.Windows.Forms.Button();
             this.buttonEqual = new System.Windows.Forms.Button();
+            this.buttonMultiply = new System.Windows.Forms.Button();
+            this.buttonDivide = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox
@@ -158,7 +160,7 @@
             // 
             // button0
             // 
-            this.button0.Location = new System.Drawing.Point(79, 175);
+            this.button0.Location = new System.Drawing.Point(13, 175);
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(60, 30);
             this.button0.TabIndex = 11;
@@ -168,7 +170,7 @@
             // 
             // buttonMinus
             // 
-            this.buttonMinus.Location = new System.Drawing.Point(211, 67);
+            this.buttonMinus.Location = new System.Drawing.Point(211, 139);
             this.buttonMinus.Name = "buttonMinus";
             this.buttonMinus.Size = new System.Drawing.Size(60, 30);
             this.buttonMinus.TabIndex = 12;
@@ -178,7 +180,7 @@
             // 
             // buttonPlus
             // 
-            this.buttonPlus.Location = new System.Drawing.Point(211, 103);
+            this.buttonPlus.Location = new System.Drawing.Point(211, 175);
             this.buttonPlus.Name = "buttonPlus";
             this.buttonPlus.Size = new System.Drawing.Size(60, 30);
             this.buttonPlus.TabIndex = 13;
@@ -188,19 +190,41 @@
             // 
             // buttonEqual
             // 
-            this.buttonEqual.Location = new System.Drawing.Point(211, 139);
+            this.buttonEqual.Location = new System.Drawing.Point(79, 175);
             this.buttonEqual.Name = "buttonEqual";
-            this.buttonEqual.Size = new System.Drawing.Size(60, 30);
+            this.buttonEqual.Size = new System.Drawing.Size(126, 30);
             this.buttonEqual.TabIndex = 14;
             this.buttonEqual.Text = "=";
             this.buttonEqual.UseVisualStyleBackColor = true;
             this.buttonEqual.Click += new System.EventHandler(this.button_Click);
+            // 
+            // buttonMultiply
+            // 
+            this.buttonMultiply.Location = new System.Drawing.Point(211, 103);
+            this.buttonMultiply.Name = "buttonMultiply";
+            this.buttonMultiply.Size = new System.Drawing.Size(60, 30);
+            this.buttonMultiply.TabIndex = 16;
+            this.buttonMultiply.Text = "x";
+            this.buttonMultiply.UseVisualStyleBackColor = true;
+            this.buttonMultiply.Click += new System.EventHandler(this.button_Click);
+            // 
+            // buttonDivide
+            // 
+            this.buttonDivide.Location = new System.Drawing.Point(211, 67);
+            this.buttonDivide.Name = "buttonDivide";
+            this.buttonDivide.Size = new System.Drawing.Size(60, 30);
+            this.buttonDivide.TabIndex = 15;
+            this.buttonDivide.Text = "÷";
+            this.buttonDivide.UseVisualStyleBackColor = true;
+            this.buttonDivide.Click += new System.EventHandler(this.button_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(285, 211);
+            this.Controls.Add(this.buttonMultiply);
+            this.Controls.Add(this.buttonDivide);
             this.Controls.Add(this.buttonEqual);
             this.Controls.Add(this.buttonPlus);
             this.Controls.Add(this.buttonMinus);
@@ -243,6 +267,8 @@
         private System.Windows.Forms.Button buttonMinus;
         private System.Windows.Forms.Button buttonPlus;
         private System.Windows.Forms.Button buttonEqual;
+        private System.Windows.Forms.Button buttonMultiply;
+        private System.Windows.Forms.Button buttonDivide;
     }
 }
 

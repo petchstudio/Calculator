@@ -17,7 +17,8 @@ namespace Calculator
         private void button_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            if(btn.Text.Equals("-") || btn.Text.Equals("+"))
+
+            if(btn.Text.Equals("÷") || btn.Text.Equals("x") || btn.Text.Equals("-") || btn.Text.Equals("+"))
             {
                 if (!string.IsNullOrEmpty(Result) && !string.IsNullOrEmpty(Operate) && !OperateFirstTime)
                 {
@@ -32,16 +33,19 @@ namespace Calculator
                 Operate = btn.Text;
                 OperateFirstTime = true;
             }
+
             else if (btn.Text.Equals("="))
             {
                 Compute();
             }
+
             else if (btn.Text.Equals("C"))
             {
                 Operate = string.Empty;
                 Result = string.Empty;
                 textBox.Clear();
             }
+
             else
             {
                 if(OperateFirstTime)
@@ -64,6 +68,12 @@ namespace Calculator
 
                 switch (Operate)
                 {
+                    case "÷":
+                        result = int.Parse(Result) / textInt;
+                        break;
+                    case "x":
+                        result = int.Parse(Result) * textInt;
+                        break;
                     case "-":
                         result = int.Parse(Result) - textInt;
                         break;
